@@ -1,16 +1,19 @@
+import {Link} from 'react-router-dom';
 import s from './Header.module.scss';
 
 function Header({onClickOpenCart}) {
     return (
         <header className={s.header}>
             <nav className={s.headerMenu}>
-                <a className={s.headerLogo} href="#">
-                    <img src="/images/logo.png" alt="logo"/>
-                    <div className={s.headerLogoText}>
-                        <h3>React Sneakers</h3>
-                        <span>Магазин найкращих кросівок</span>
-                    </div>
-                </a>
+                <Link to="/">
+                    <a className={s.headerLogo} href="#">
+                        <img src="/images/logo.png" alt="Логотип компанії"/>
+                        <div className={s.headerLogoText}>
+                            <h3>React Sneakers</h3>
+                            <span>Магазин найкращих кросівок</span>
+                        </div>
+                    </a>
+                </Link>
             </nav>
             <ul className={s.headerList}>
                 <li className={s.headerItem}>
@@ -22,11 +25,13 @@ function Header({onClickOpenCart}) {
                     </button>
                 </li>
                 <li className={s.headerItem}>
-                    <button>
-                        <svg className={s.headerIcon}>
-                            <use href="/images/sprite.svg#favorite"></use>
-                        </svg>
-                    </button>
+                    <Link to="/favorites">
+                        <button>
+                            <svg className={s.headerIcon}>
+                                <use href="/images/sprite.svg#favorite"></use>
+                            </svg>
+                        </button>
+                    </Link>
                 </li>
                 <li className={s.headerItem}>
                     <button>

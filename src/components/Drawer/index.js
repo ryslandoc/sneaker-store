@@ -19,7 +19,7 @@ function Drawer({onClickCloseCart, items = [], onRemoveItem}) {
                             {items.map(item => {
                                 return <li className={s.wrapperCartItem}>
                                     <img className="cart-item-img" width={70} height={55}
-                                         src={item.image} alt="product image"/>
+                                         src={item.image} alt="Фото кросівок"/>
                                     <div className={s.cartItemInfo}>
                                         <p className={s.cartItemTitle}>
                                             {item.title}
@@ -59,7 +59,7 @@ function Drawer({onClickCloseCart, items = [], onRemoveItem}) {
                 ) : (
                     <div className={s.wrapperCartEmptyContains}>
                         <div className={s.wrapperCartEmpty}>
-                            <img width={120} height={120} src="/images/empty-box.png" alt="empty box"/>
+                            <img width={120} height={120} src="/images/empty-box.png" alt="Пуста коробка"/>
                             <h2 className={s.titleCartEmpty}>
                                 Кошик порожній
                             </h2>

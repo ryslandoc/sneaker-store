@@ -1,7 +1,7 @@
 import s from './Card.module.scss';
 import React from "react";
 
-function Card({title, image, price, onAddButtonCard}) {
+function Card({title, image, price, onAddButtonCard, onAddButtonFavorite}) {
     const [isAdded, setIsAdded] = React.useState(false);
     const [isFavorite, setIsFavorite] = React.useState(false);
 
@@ -10,6 +10,7 @@ function Card({title, image, price, onAddButtonCard}) {
         setIsAdded(!isAdded);
     }
     const handleFavorite = () => {
+        onAddButtonFavorite({title, image, price})
         setIsFavorite(!isFavorite);
     }
 
@@ -21,7 +22,7 @@ function Card({title, image, price, onAddButtonCard}) {
                 </svg>
             </button>
             <div className={s.cardInfo}>
-                <img className={s.cardImg} src={image} alt="sneakers"/>
+                <img className={s.cardImg} src={image} alt="Фото кросівок"/>
                 <h4 className={s.cardTitle}>
                     {title}
                 </h4>

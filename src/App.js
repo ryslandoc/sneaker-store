@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import {Routes, Route} from 'react-router-dom';
 import './scss/style.scss';
 import Header from "./components/Header";
 import Card from "./components/Card";
@@ -11,12 +12,15 @@ function App() {
     const [items, setItems] = React.useState([]);
     const [cartItems, setCartItems] = React.useState([]);
     const [searchValue, setSearchValue] = React.useState('');
+    const [favorites, setFavorites] = React.useState([]);
 
     React.useEffect(() => {
         axios.get('https://62f8aacee0564480352b3b8f.mockapi.io/items')
             .then(res => setItems(res.data));
         axios.get('https://62f8aacee0564480352b3b8f.mockapi.io/cart')
             .then(res => setCartItems(res.data))
+        axios.get('https://62f8aacee0564480352b3b8f.mockapi.io/favorite')
+            .then(res => setFavorites(res.data))
     }, []);
 
     const onAddToCart = (obj) => {
@@ -30,7 +34,12 @@ function App() {
 
     const onRemoveItemFromCart = (id) => {
         axios.delete(`https://62f8aacee0564480352b3b8f.mockapi.io/cart/${id}`);
-        setCartItems(prev => prev.filter(item => item.id !== id));
+        setFavorites(prev => prev.filter(item => item.id !== id));
+    }
+
+    const onAddToFavorite = (obj) => {
+        axios.post('https://62f8aacee0564480352b3b8f.mockapi.io/favorite', obj);
+        setCartItems(prev => [...prev, obj]);
     }
 
     return (
@@ -41,6 +50,11 @@ function App() {
                 onRemoveItem={onRemoveItemFromCart}
             /> : null}
             <Header onClickOpenCart={() => setCartOpen(true)}/>
+
+            <Routes>
+                <Route path="/favorites" element={<h1>Hi</h1>}></Route>
+            </Routes>
+
             <div className="wrapper-title-search">
                 <h1 className="title">
                     {searchValue ? `Пошук по запросу: "${searchValue}"` : 'Все кроссовки'}
@@ -66,6 +80,7 @@ function App() {
                             image={item.image}
                             price={item.price}
                             onAddButtonCard={(obj) => onAddToCart(obj)}
+                            onAddButtonFavorite={(obj) => onAddToFavorite(obj)}
                         />
                     })}
                 <li className="card-item"></li>

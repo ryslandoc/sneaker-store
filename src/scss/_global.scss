@@ -1,0 +1,50 @@
+@import "vars";
+
+/* Global styles */
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: $black;
+  background-color: $body-background-color;
+  padding: 20px 0 50px 0;
+}
+
+.wrapper {
+  background-color: $white;
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 20px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.2;
+  color: $black;
+}
+
+button, input {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: $black;
+}
+
+/* Style for head hidden */
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}

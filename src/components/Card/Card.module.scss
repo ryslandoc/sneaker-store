@@ -1,0 +1,127 @@
+@import "../../scss/vars";
+
+.cardItem {
+  position: relative;
+  width: 21%;
+  background: $white;
+  border: 1px solid $card-border;
+  border-radius: 40px;
+  transition: transform 0.3s;
+  margin-bottom: 40px;
+
+  @media (max-width: 1024px) {
+    width: 47%;
+  }
+
+  &:hover {
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.05);
+    transform: translateY(-10px);
+    transition: transform 0.3s;
+  }
+
+  .cardActiveFavorite {
+    position: absolute;
+    top: 20px;
+    left: 22px;
+    width: 32px;
+    height: 32px;
+    background-color: #FEF0F0;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .favoriteIcon {
+      width: 14px;
+      height: 12px;
+    }
+  }
+
+  .cardFavorite {
+    position: absolute;
+    top: 20px;
+    left: 22px;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #F8F8F8;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .favoriteIcon {
+      fill: #ECECEC;
+      width: 14px;
+      height: 12px;
+    }
+  }
+
+  .cardInfo {
+    padding: 10px 22px 34px;
+
+    .cardImg {
+      width: 100%;
+    }
+
+    .cardTitle {
+      font-weight: 400;
+      color: $black;
+      margin: 14px 0;
+      height: 55px;
+    }
+
+    .cardSubInfo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .cardPrice {
+        span {
+          font-weight: 500;
+          font-size: 11px;
+          line-height: 13px;
+          text-transform: uppercase;
+          color: #BDBDBD;
+        }
+
+        p {
+          margin-top: 2px;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 17px;
+          color: $black;
+        }
+      }
+
+      .cardAddActive {
+        width: 32px;
+        height: 32px;
+        background: linear-gradient(180deg, #89F09C 0%, #3CC755 100%);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .addIcon {
+          width: 12px;
+          height: 10px;
+        }
+      }
+
+      .cardAddCart {
+        width: 32px;
+        height: 32px;
+        border: 1px solid $add-cart-border;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .addIcon {
+          width: 11px;
+          height: 11px;
+        }
+      }
+    }
+  }
+}

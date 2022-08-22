@@ -1,0 +1,76 @@
+@import "../../scss/vars";
+
+.header {
+  border-bottom: 1px solid $header-border-color;
+  padding: 44px 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .headerMenu {
+    .headerLogo {
+      display: flex;
+      align-items: center;
+
+      .headerLogoText {
+        display: flex;
+        flex-direction: column;
+        margin-left: 16px;
+
+        h3 {
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 24px;
+          text-transform: uppercase;
+          color: $black;
+        }
+
+        span {
+          color: $sub-color;
+        }
+      }
+    }
+  }
+
+  .headerList {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .headerItem {
+
+      button {
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          .headerIcon {
+            transition: 0.3s ease-in-out;
+            stroke: #A5D364;
+            fill: #A5D364;
+          }
+
+          span {
+            transition: 0.3s ease-in-out;
+            color: #A5D364;
+          }
+        }
+
+        span {
+          margin-left: 10px;
+          font-weight: 600;
+          color: $count-price-color;
+          transition: 0.3s ease-in-out;
+        }
+
+        .headerIcon {
+          fill: $icon-color-fill;
+          stroke: $icon-color-fill;
+          width: 20px;
+          height: 19px;
+          transition: 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+}

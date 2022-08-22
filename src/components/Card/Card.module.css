@@ -1,0 +1,112 @@
+/* Colors */
+.cardItem {
+  position: relative;
+  width: 21%;
+  background: #fff;
+  border: 1px solid #F3F3F3;
+  border-radius: 40px;
+  transition: transform 0.3s;
+  margin-bottom: 40px;
+}
+@media (max-width: 1024px) {
+  .cardItem {
+    width: 47%;
+  }
+}
+.cardItem:hover {
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.05);
+  transform: translateY(-10px);
+  transition: transform 0.3s;
+}
+.cardItem .cardActiveFavorite {
+  position: absolute;
+  top: 20px;
+  left: 22px;
+  width: 32px;
+  height: 32px;
+  background-color: #FEF0F0;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cardItem .cardActiveFavorite .favoriteIcon {
+  width: 14px;
+  height: 12px;
+}
+.cardItem .cardFavorite {
+  position: absolute;
+  top: 20px;
+  left: 22px;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #F8F8F8;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cardItem .cardFavorite .favoriteIcon {
+  fill: #ECECEC;
+  width: 14px;
+  height: 12px;
+}
+.cardItem .cardInfo {
+  padding: 10px 22px 34px;
+}
+.cardItem .cardInfo .cardImg {
+  width: 100%;
+}
+.cardItem .cardInfo .cardTitle {
+  font-weight: 400;
+  color: #000;
+  margin: 14px 0;
+  height: 55px;
+}
+.cardItem .cardInfo .cardSubInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cardItem .cardInfo .cardSubInfo .cardPrice span {
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+  text-transform: uppercase;
+  color: #BDBDBD;
+}
+.cardItem .cardInfo .cardSubInfo .cardPrice p {
+  margin-top: 2px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000;
+}
+.cardItem .cardInfo .cardSubInfo .cardAddActive {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(180deg, #89F09C 0%, #3CC755 100%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cardItem .cardInfo .cardSubInfo .cardAddActive .addIcon {
+  width: 12px;
+  height: 10px;
+}
+.cardItem .cardInfo .cardSubInfo .cardAddCart {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #F2F2F2;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cardItem .cardInfo .cardSubInfo .cardAddCart .addIcon {
+  width: 11px;
+  height: 11px;
+}
+
+/*# sourceMappingURL=Card.module.css.map */

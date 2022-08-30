@@ -1,6 +1,6 @@
 import s from './Drawer.module.scss';
 
-function Drawer({onClickCloseCart, items = [], onRemoveItem}) {
+function Drawer({items = [], onClickCloseCart, onRemoveItem}) {
     return (
         <div className={s.drawerOverlay}>
             <div className={s.drawer}>
@@ -17,7 +17,7 @@ function Drawer({onClickCloseCart, items = [], onRemoveItem}) {
                     <div className={s.wrapperCartContains}>
                         <ul className={s.wrapperCartItems}>
                             {items.map(item => {
-                                return <li className={s.wrapperCartItem}>
+                                return <li key={item.id} className={s.wrapperCartItem}>
                                     <img className="cart-item-img" width={70} height={55}
                                          src={item.image} alt="Фото кросівок"/>
                                     <div className={s.cartItemInfo}>

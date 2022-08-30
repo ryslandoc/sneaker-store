@@ -1,7 +1,8 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import Card from "../components/Card";
 
-function Favorites({items = []}) {
+function Favorites({items = [], onAddToFavorite}) {
     return (
         <div>
             {
@@ -20,6 +21,15 @@ function Favorites({items = []}) {
                             </h1>
                         </div>
                         <ul className="card-list">
+                            {items.map((item) => {
+                                return <Card
+                                    key={item.id}
+                                    {...item}
+                                    favorited={true}
+                                    onFavorite={onAddToFavorite}
+                                    onAddButtonFavorite={(obj) => onAddToFavorite(obj)}
+                                />
+                            })}
                             <li className="card-item"></li>
                             <li className="card-item"></li>
                         </ul>

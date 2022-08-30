@@ -6,13 +6,13 @@ function Header({onClickOpenCart}) {
         <header className={s.header}>
             <nav className={s.headerMenu}>
                 <Link to="/">
-                    <a className={s.headerLogo} href="#">
+                    <div className={s.headerLogo}>
                         <img src="/images/logo.png" alt="Логотип компанії"/>
                         <div className={s.headerLogoText}>
                             <h3>React Sneakers</h3>
                             <span>Магазин найкращих кросівок</span>
                         </div>
-                    </a>
+                    </div>
                 </Link>
             </nav>
             <ul className={s.headerList}>

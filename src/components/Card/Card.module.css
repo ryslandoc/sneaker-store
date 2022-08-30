@@ -7,6 +7,9 @@
   border-radius: 40px;
   transition: transform 0.3s;
   margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  padding: 25px 0 28px;
 }
 @media (max-width: 1024px) {
   .cardItem {
@@ -52,7 +55,8 @@
   height: 12px;
 }
 .cardItem .cardInfo {
-  padding: 10px 22px 34px;
+  width: 100%;
+  max-width: 150px;
 }
 .cardItem .cardInfo .cardImg {
   width: 100%;

@@ -3,10 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="a47a85eb-460e-4b69-8b7d-5f2d401edfb4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Card/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Drawer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Drawer/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card/Card.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/Card.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card/Card.module.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/Card.module.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card/Card.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/Card.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Drawer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Drawer/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Favorites.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Favorites.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/style.scss" afterDir="false" />
@@ -43,7 +50,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/ruslan/Ruslan/sneakers-shop/public/images",
+    "last_opened_file_path": "/home/ruslan/Ruslan/sneakers-shop",
     "list.type.of.created.stylesheet": "SCSS",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -70,7 +77,9 @@
       <workItem from="1660907171859" duration="8144000" />
       <workItem from="1660989371405" duration="3524000" />
       <workItem from="1661151163661" duration="28647000" />
-      <workItem from="1661418795783" duration="8893000" />
+      <workItem from="1661418795783" duration="10196000" />
+      <workItem from="1661498725603" duration="21363000" />
+      <workItem from="1661850408608" duration="3314000" />
     </task>
     <servers />
   </component>

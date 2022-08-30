@@ -1,9 +1,23 @@
 import Card from "../components/Card";
 import React from "react";
 
-function Home({searchValue, setSearchValue, items, onChangeSearchInput, onAddToFavorite, onAddToCart}) {
+function Home({searchValue, setSearchValue, items = [], onChangeSearchInput, onAddToFavorite, onAddToCart, cartItems, isLoading,}) {
+    const renderItems = () => {
+        const filteredItems = items.filter(item => item.title.toLowerCase().includes(searchValue.toLowerCase()));
+        return (isLoading ? [...Array(10)] : filteredItems).map((item, index) => {
+            return <Card
+                key={index}
+                {...item}
+                onAddButtonFavorite={obj => onAddToFavorite(obj)}
+                onAddButtonCard={obj => onAddToCart(obj)}
+                added={cartItems.some(obj => Number(obj.id) === Number(item.id))}
+                loading={isLoading}
+            />
+        })
+    }
+
     return (
-        <div>
+        <React.Fragment>
             <div className="wrapper-title-search">
                 <h1 className="title">
                     {searchValue ? `Пошук по запросу: "${searchValue}"` : 'Все кроссовки'}
@@ -22,21 +36,11 @@ function Home({searchValue, setSearchValue, items, onChangeSearchInput, onAddToF
                 </div>
             </div>
             <ul className="card-list">
-                {items
-                    .filter(item => item.title.toLowerCase().includes(searchValue.toLowerCase())).map((item) => {
-                        return <Card
-                            key={item.id}
-                            title={item.title}
-                            image={item.image}
-                            price={item.price}
-                            onAddButtonCard={(obj) => onAddToCart(obj)}
-                            onAddButtonFavorite={(obj) => onAddToFavorite(obj)}
-                        />
-                    })}
+                {renderItems()}
                 <li className="card-item"></li>
                 <li className="card-item"></li>
             </ul>
-        </div>
+        </React.Fragment>
     );
 }
 

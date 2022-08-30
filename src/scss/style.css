@@ -120,6 +120,7 @@ button {
   cursor: pointer;
 }
 
+/* ====== Home page styles ====== */
 /* title and search styles */
 .wrapper-title-search {
   margin: 40px 0;
@@ -192,7 +193,7 @@ button {
   box-shadow: unset;
 }
 
-/* Favorites page styles */
+/* ====== Favorites page styles ====== */
 .favorite-wrapper-empty {
   display: flex;
   align-items: center;
@@ -270,6 +271,9 @@ button {
 .favorite-wrapper .favorite-top .favorite-button-back:hover {
   transition: transform 0.3s;
   transform: translateY(-5px);
+}
+.favorite-wrapper .card-list {
+  padding: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
